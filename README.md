@@ -1,4 +1,4 @@
-# Data Wrangling _ Model Building
+# Data Preprocessing _ Model Building
 
 Activity 1: Data Preparation and Preprocessing
 ----------------------------------------------
