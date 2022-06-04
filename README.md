@@ -28,3 +28,4 @@ A model will be developed to predict if customers will file a claim in their fir
 
 
 Libraries used: pandas, matplotlib, seaborn, sklearn
+----
