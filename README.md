@@ -25,3 +25,6 @@ An auto-insurance company is revamping its pricing model. The analyst developing
 The data is contained in claim_prediction.csv, where CLAIM = 1 means the customer filed a claim in the first year and CLAIM = 0 means the customer did not.
 
 A model will be developed to predict if customers will file a claim in their first year based on their driving behavior.
+
+
+Libraries used: pandas, matplotlib, seaborn, sklearn
