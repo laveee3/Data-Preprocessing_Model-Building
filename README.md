@@ -1,31 +1,105 @@
-# Data Preprocessing _ Model Building
+# ⚡ Data Preprocessing & Model Building
 
-Requirements 1: Data Preparation and Preprocessing
-----------------------------------------------
-Here the customer is a power trading organization. We have just received a dataset from them and are trying to clean raw data in preparation for modeling. The data set includes hourly weather metrics as well as power output values in kWh.
+This repository demonstrates **data cleaning, preprocessing, and machine learning model development** using two real-world use cases:  
+1. **Power trading organization data preparation**  
+2. **Auto-insurance claim prediction model**
 
-Datasets:
-Power_data_preprocessing.csv 
-Weather_data_preprocessing.csv
+---
 
-Contraints:
-1.	The customer has shared two datasets with inconsistent quality.
-		a.	Some of the weather data is missing. Using the information in the column header, we determine the appropriate way to handle the missing data and explain the reasoning in the comments.
-2.	The Power data is particularly useful for modeling purposes but needs some preprocessing.
-	a.	Power usage can be affected by the day, month, or season. One of these timeframes will be chosen to create a categorical variable for it.
-	b.	Will choose an appropriate scaling method. 
-	c.	The company experienced a power outage due to high winds. On days where the wind was 30mph or above customers lost power. A filter will be created to remove the dates when customers lost power.
+## 📌 Project Overview
 
+### **1. Data Preparation & Preprocessing (Power Trading Organization)**
 
-Requirements 2: Model Building
----------------------------
+We received **hourly weather metrics** and **power output values (kWh)** datasets from a power trading organization.  
+The goal is to clean and prepare the raw data for modeling.
 
-An auto-insurance company is revamping its pricing model. The analyst developing the new price model believes that the best approach is to develop 2 models: one for customers who are likely to file an insurance claim within the first year of their contract and another one for all other customers. The analyst has prepared a clean dataset consisting of 10,000 customers and 10 engineered features which capture driving behavior. The data has already been preprocessed for you (i.e., no missing data, no outliers, data is scaled, no correlated features, and the classes are balanced).
+#### **Datasets**
+- `Power_data_preprocessing.csv`
+- `Weather_data_preprocessing.csv`
 
-The data is contained in claim_prediction.csv, where CLAIM = 1 means the customer filed a claim in the first year and CLAIM = 0 means the customer did not.
+#### **Tasks & Constraints**
+- Handle missing weather data appropriately and document reasoning.  
+- Create categorical variables for time-based features (day, month, or season).  
+- Apply an appropriate scaling method for numerical features.  
+- Filter out days with **power outages** (wind ≥ 30 mph).  
 
-A model will be developed to predict if customers will file a claim in their first year based on their driving behavior.
+---
 
+### **2. Model Building (Auto-Insurance Claim Prediction)**
 
-Libraries used: pandas, matplotlib, seaborn, sklearn
-----
+An auto-insurance company needs to build a **pricing model** based on customers' likelihood of filing a claim within their first year.
+
+#### **Dataset**
+- `claim_prediction.csv`  
+- Contains **10,000 customers** and **10 engineered features** related to driving behavior.  
+- Target variable:  
+  - `CLAIM = 1`: customer filed a claim  
+  - `CLAIM = 0`: customer did not file a claim  
+
+#### **Tasks**
+- Build two models:  
+  1. For customers **likely to file a claim**  
+  2. For customers **unlikely to file a claim**  
+- Dataset is pre-cleaned: no missing data, balanced classes, and features already scaled.  
+
+---
+
+## 📝 Notebook Highlights: DataWrangling_ModelBuilding.ipynb
+
+The core notebook **[`DataWrangling_ModelBuilding.ipynb`](DataWrangling_ModelBuilding.ipynb)** covers:
+
+### **Data Wrangling**
+- Importing and merging multiple datasets  
+- Handling missing data with different imputation strategies  
+- Filtering and cleaning based on domain constraints (e.g., removing outage days)  
+- Creating new **categorical and temporal features**  
+
+### **Exploratory Data Analysis (EDA)**
+- Summary statistics and correlation analysis  
+- Visualizing distributions and relationships using **Matplotlib & Seaborn**  
+
+### **Feature Engineering & Scaling**
+- One-hot encoding and ordinal variables  
+- Normalization and standardization methods  
+
+### **Model Building**
+- Splitting datasets into training and testing sets  
+- Building classification models using **scikit-learn**  
+- Evaluating models with metrics:  
+  - Accuracy, Precision, Recall, F1-score  
+  - ROC-AUC and confusion matrix  
+
+### **Visualization**
+- Feature importance plots  
+- Performance comparison charts across models  
+
+---
+
+## 🛠️ Tech Stack
+
+- **Languages:** Python (3.x)  
+- **Libraries:**  
+  - `pandas` – data manipulation  
+  - `matplotlib`, `seaborn` – visualization  
+  - `scikit-learn` – model building & evaluation  
+
+---
+
+## 📂 Repository Structure
+
+Data-Preprocessing-Model-Building/
+
+├── data/
+│ ├── Power_data_preprocessing.csv
+│ ├── Weather_data_preprocessing.csv
+│ └── claim_prediction.csv
+
+├── notebooks/
+│ └── DataWrangling_ModelBuilding.ipynb
+
+├── output/
+│ ├── cleaned_power_data.csv
+│ ├── weather_summary.csv
+│ └── claim_model_results.csv
+
+└── README.md
