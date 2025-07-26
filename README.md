@@ -1,4 +1,4 @@
-# ⚡ Data Preprocessing & Model Building
+# Data Preprocessing & Model Building
 
 This repository demonstrates **data cleaning, preprocessing, and machine learning model development** using two real-world use cases:  
 1. **Power trading organization data preparation**  
@@ -6,7 +6,7 @@ This repository demonstrates **data cleaning, preprocessing, and machine learnin
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 ### **1. Data Preparation & Preprocessing (Power Trading Organization)**
 
@@ -44,7 +44,7 @@ An auto-insurance company needs to build a **pricing model** based on customers'
 
 ---
 
-## 📝 Notebook Highlights: DataWrangling_ModelBuilding.ipynb
+##  Notebook Highlights: DataWrangling_ModelBuilding.ipynb
 
 The core notebook **[`DataWrangling_ModelBuilding.ipynb`](DataWrangling_ModelBuilding.ipynb)** covers:
 
@@ -75,7 +75,7 @@ The core notebook **[`DataWrangling_ModelBuilding.ipynb`](DataWrangling_ModelBui
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Languages:** Python (3.x)  
 - **Libraries:**  
@@ -85,7 +85,7 @@ The core notebook **[`DataWrangling_ModelBuilding.ipynb`](DataWrangling_ModelBui
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 Data-Preprocessing-Model-Building/
 
